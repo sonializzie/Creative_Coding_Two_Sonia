@@ -1,0 +1,13 @@
+//p5 Functions needs to be defined in the setup() or draw()
+
+function drawGrid(xGrid, yGrid) {
+  let boxWidth = width / xGrid;
+  let boxHeight = height / yGrid;
+  fill(0, 0, 255);
+  stroke(255);
+  for (let y = 0; y < yGrid; y++) {
+    for (let x = 0; x < xGrid; x++) {
+      rect(x * boxWidth, y * boxHeight, boxWidth, boxHeight);
+    }
+  }
+}
