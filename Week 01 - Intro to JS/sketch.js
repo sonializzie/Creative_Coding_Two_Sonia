@@ -1,6 +1,5 @@
 //p5 Functions needs to be defined in the setup() or draw()
 
-
 let space = 17;
 
 let numSquares = 10;
@@ -9,8 +8,6 @@ let squareWidth = 15;
 
 let xOffset = 40;
 let yOffset = 50;
-
-
 
 //This is declaring a variable in a statement
 let hello;
@@ -37,22 +34,19 @@ function setup() {
   background(100); // sets to specify colour //Defining a function
 }
 
-
-
 //The draw function can excute the code a number of times
 function draw() {
-  
   //   rect(50, 50, 50, 50);
   //   rect(110, 50, 50, 50);
   //   rect(170, 50, 50, 50);
   //   rect(230, 50, 50, 50);
   //   rect(290, 50, 50, 50);
-    drawBoxes();
+  drawBoxes();
 }
 
-drawBoxes(){
-    fill(255, 0, 0);
-    for (let i = 0; i < numSquares; i++) {
-        rect(i * space +xOffset, yOffset, squareWidth, squareHeight)
-    }
+function drawBoxes() {
+  fill(255, 0, 0);
+  for (let i = 0; i < numSquares; i++) {
+    rect(i * space + xOffset, yOffset, squareWidth, squareHeight);
+  }
 }
