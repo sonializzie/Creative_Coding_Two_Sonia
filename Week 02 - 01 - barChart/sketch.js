@@ -10,12 +10,17 @@ let remaingSpace = chartWidth - margin * 2 - spacing * (data.length - 1);
 
 let barWidth = remaingSpace / data.length;
 
+let colors;
+
 console.log(barWidth);
 
 //The setup function only excutes the code once
 function setup() {
   createCanvas(500, 500);
   background(255); // sets to specify colour //Defining a function
+  angleMode(DEGREES);
+  colors = [color("blue"), color("orange"), color("cyan"), color("purple")];
+  sort(data);
 }
 
 //The draw function can excute the code a number of times
@@ -35,6 +40,7 @@ function draw() {
   translate(margin, 0);
   for (let i = 0; i < data.length; i++) {
     rect(i * (barWidth + spacing), 0, barWidth, -data[i]);
+    fill(colors[i % 4]);
   }
 
   fill(0, 0, 255);
