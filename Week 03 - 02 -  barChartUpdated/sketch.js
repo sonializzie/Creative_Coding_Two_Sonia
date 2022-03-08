@@ -2,7 +2,18 @@
 
 let chartWidth = 400;
 let chartHeight = 400;
-let data = [345, 123, 120, 233, 345, 123, 120, 233, 345, 123, 120, 233];
+// let data = [345, 123, 120, 233, 345, 123, 120, 233, 345, 123, 120, 233];
+let data = [
+  { value: 26, label: "Oranges" },
+  { value: 32, label: "Apples" },
+  { value: 43, label: "Bananas" },
+  { value: 16, label: "Pears" },
+];
+
+let listValues = data.map(function (x) {
+  return x.value;
+});
+
 let margin = 20;
 let spacing = 1;
 
@@ -41,12 +52,6 @@ function draw() {
   line(0, 0, 0, -400);
   //X axis
   line(0, 0, 400, 0);
-
-  //Draw some ticks
-  // line(0, 0, -tickLength, 0);
-  // line(0, -40, -tickLength, -40);
-  // line(0, -80, -tickLength, -80);
-  // line(0, -120, -tickLength, -120);
 
   //For Loop for numTicks and tickDistance
   for (let i = 0; i <= numTicks; i++) {
